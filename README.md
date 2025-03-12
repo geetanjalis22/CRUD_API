@@ -2,7 +2,7 @@
 
 ## Overview
 This documentation provides detailed information about the endpoints, request formats, and sample responses for the CRUD Article Management API built with TypeScript, ExpressJS, MongoDB, and Joi.
-# Required Installations
+## Required Installations
 1 npm init -y 
 2 npm install express mongoose joi cors dotenv 
 3 npm install --save-dev typescript ts-node nodemon @types/express @types/node @types/cors
