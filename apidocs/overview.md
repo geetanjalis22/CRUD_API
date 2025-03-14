@@ -188,6 +188,35 @@ http://localhost:5000/api
   }
 ]
 ```
+#### ➤ Update Article
+**PUT** `/articles/:id`
+
+**Request Body:**
+```json
+{
+  "title": "Advanced MongoDB",
+  "description": "In-depth MongoDB features"
+}
+```
+
+**Response:**
+```json
+{
+  "_id": "605c72b4f1f1c23a04d5f654",
+  "title": "Advanced MongoDB",
+  "description": "In-depth MongoDB features"
+}
+```
+
+#### ➤ Delete Article
+**DELETE** `/articles/:id`
+
+**Response:**
+```json
+{
+  "message": "Article deleted successfully"
+}
+```
 ---
 ## Added Feature: **Article Filter Endpoint**
 
@@ -264,35 +293,7 @@ GET /articles/getArticleByFilter?category=65fd8f6a1234567890abcde1&tags=65fd8f6a
 
 
 
-#### ➤ Update Article
-**PUT** `/articles/:id`
 
-**Request Body:**
-```json
-{
-  "title": "Advanced MongoDB",
-  "description": "In-depth MongoDB features"
-}
-```
-
-**Response:**
-```json
-{
-  "_id": "605c72b4f1f1c23a04d5f654",
-  "title": "Advanced MongoDB",
-  "description": "In-depth MongoDB features"
-}
-```
-
-#### ➤ Delete Article
-**DELETE** `/articles/:id`
-
-**Response:**
-```json
-{
-  "message": "Article deleted successfully"
-}
-```
 
 ---
 ## 4. **Error Handling**
