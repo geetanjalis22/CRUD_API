@@ -332,7 +332,7 @@ GET /articles/getArticleByFilter?category=65fd8f6a1234567890abcde1&tags=65fd8f6a
 
 **Usage Notes:**
 - The `category` parameter is required to filter by a specific category.
-- The `tags` parameter is optional but, if provided, should include tag IDs separated by commas.
+- The `tags` parameter should include tag IDs separated by commas.
 - The endpoint returns articles along with their metadata details such as title, description, and creation timestamps.
 
 
