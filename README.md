@@ -263,7 +263,7 @@ npm run dev
 - **Mongoose**
 - **Joi (Validation)**
 ---
-## 4. **Article Filter Endpoint**
+## Added Feature: **Article Filter Endpoint**
 
 ### ➤ Get Articles by Filter
 **GET** `/articles/getArticleByFilter`
