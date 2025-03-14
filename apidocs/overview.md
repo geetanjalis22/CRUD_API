@@ -188,6 +188,81 @@ http://localhost:5000/api
   }
 ]
 ```
+---
+## Added Feature: **Article Filter Endpoint**
+
+### ➤ Get Articles by Filter
+**GET** `/articles/getArticleByFilter`
+
+**Query Parameters:**
+| Parameter | Type   | Required | Description                                        |
+|------------|--------|-----------|----------------------------------------------------|
+| `category`  | String | Yes        | Category ID to filter articles by category          |
+| `tags`      | String | No         | Comma-separated tag IDs to filter articles by tags  |
+
+**Sample Request:**
+```
+GET /articles/getArticleByFilter?category=65fd8f6a1234567890abcde1&tags=65fd8f6a1234567890abcde2,65fd8f6a1234567890abcde3
+```
+
+**Sample Response:**
+```json
+[
+  {
+    "_id":"65fe1234567890abcdef123",
+    "title":"The Future of AI",
+    "description":"Exploring the advancements in AI technology.",
+    "body":"Artificial Intelligence (AI) is transforming industries...",
+    "image_url":"https://example.com/image.jpg",
+    "category":"65fd8f6a1234567890abcde1",
+    "tags":["65fd8f6a1234567890abcde2","65fd8f6a1234567890abcde3"],
+    "createdAt":"2025-03-11T10:00:00Z",
+    "id":"ART123",
+    "date":"2025-03-11",
+    "time":"10:00 AM",
+    "name":"AI Innovations",
+    "tagsMetadata": []
+  },
+  {
+    "_id":"65fe9876543210abcdef987",
+    "title":"Mastering TypeScript",
+    "description":"A comprehensive guide to TypeScript best practices.",
+    "body":"TypeScript is a strongly typed language...",
+    "image_url":"https://example.com/typescript.jpg",
+    "category":"65fd8f6a1234567890abcde1",
+    "tags":["65fd8f6a1234567890abcde2","65fd8f6a1234567890abcde3"],
+    "createdAt":"2025-03-12T09:00:00Z",
+    "id":"ART456",
+    "date":"2025-03-12",
+    "time":"09:00 AM",
+    "name":"TypeScript Insights",
+    "tagsMetadata": []
+  }
+]
+```
+
+**Error Responses:**
+- **404 Not Found:** If no articles match the specified criteria.
+  ```json
+  {
+    "message": "No articles found matching the filters."
+  }
+  ```
+- **500 Internal Server Error:** If there is an issue with the server or database query.
+  ```json
+  {
+    "error": "Could not fetch articles",
+    "details": "<error details>"
+  }
+  ```
+
+**Usage Notes:**
+- The `category` parameter is required to filter by a specific category.
+- The `tags` parameter should include tag IDs separated by commas.
+- The endpoint returns articles along with their metadata details such as title, description, and creation timestamps.
+
+
+
 
 #### ➤ Update Article
 **PUT** `/articles/:id`
