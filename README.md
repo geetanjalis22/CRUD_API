@@ -1,7 +1,7 @@
 # API Documentation for CRUD Article Management API
 
 ## Overview
-This documentation provides detailed information about the endpoints, request formats, and sample responses for the CRUD Article Management API built with TypeScript, ExpressJS, MongoDB, and Joi.
+This documentation provides detailed information about the endpoints, request formats, and sample responses for the CRUD Article Management API built with TypeScript, ExpressJS, MongoDB, and Joi. Check API DOCS for additional features
 
 ---
 ## Required Installations
