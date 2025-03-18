@@ -5,7 +5,7 @@ This documentation outlines the API endpoints for a secure JWT-based authenticat
 
 ## Base URL
 ```
-http://localhost:8000
+http://localhost:3000
 ```
 
 ## Endpoints
